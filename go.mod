@@ -1,3 +1,3 @@
-module playgound.go
+module golang-tutorial
 
 go 1.20
