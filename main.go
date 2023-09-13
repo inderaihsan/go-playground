@@ -11,5 +11,6 @@ func main() {
 	basic.SayHello()
 	fmt.Println("maximum number : ", basic.Findmax(list))
 	fmt.Println("average : ", basic.Average(list))
+	fmt.Println("STD : ", basic.StandardDeviation(list))
 
 }

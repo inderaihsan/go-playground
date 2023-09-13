@@ -2,6 +2,7 @@ package basicOperations
 
 import (
 	"fmt"
+	"math"
 )
 
 func SayHello() {
@@ -34,5 +35,16 @@ func Average(array []float64) float64 {
 		sum = float64(sum) + array[i]
 	}
 	result := sum / float64(count)
+	return float64(result)
+}
+
+func StandardDeviation(array []float64) float64 {
+	mean := Average(array)
+	count := len(array)
+	sum := float64(0)
+	for i := 0; i < count; i++ {
+		sum = sum + math.Pow((array[i]-mean), 2)
+	}
+	result := math.Sqrt(sum / float64(count))
 	return float64(result)
 }
